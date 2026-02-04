@@ -35,7 +35,7 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => (
         <footer>
           <center>
             <span className="block text-sm pb-4 text-[#E0E0E0] text-center">
-              © 2025{" "}
+              © 2026{" "}
               <a href="https://flowbite.com/" className="text-[#3ABEF9] hover:underline">
                 Jefferson Cagua
               </a>

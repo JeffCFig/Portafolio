@@ -1,26 +1,24 @@
 import React, { useEffect, useRef } from "react"
 
+const INITIAL_POSITIONS = [
+	{ x: -4, y: 0 },
+	{ x: -4, y: 0 },
+	{ x: 20, y: -8 },
+	{ x: 20, y: -8 },
+]
+
 const AnimatedBackground = () => {
 	const blobRefs = useRef([])
-	const initialPositions = [
-		{ x: -4, y: 0 },
-		{ x: -4, y: 0 },
-		{ x: 20, y: -8 },
-		{ x: 20, y: -8 },
-	]
 
 	useEffect(() => {
-		let currentScroll = 0
 		let requestId
 
 		const handleScroll = () => {
 			const newScroll = window.pageYOffset
-			const scrollDelta = newScroll - currentScroll
-			currentScroll = newScroll
 
 			blobRefs.current.forEach((blob, index) => {
 				if (!blob) return
-				const initialPos = initialPositions[index]
+				const initialPos = INITIAL_POSITIONS[index]
 
 				// Calculating movement in both X and Y direction
 				const xOffset = Math.sin(newScroll / 100 + index * 0.5) * 340 // Horizontal movement
