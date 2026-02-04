@@ -1,0 +1,125 @@
+.modern-home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 82vh;
+  padding: 10px 5vw;
+  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.modern-hero {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.modern-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #0f2027;
+}
+
+.modern-hero h2 {
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: #345678;
+  margin-bottom: 0;
+}
+
+.modern-hero p {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.highlight {
+  color: #00c6ff;
+  background: linear-gradient(90deg, #56ccf2, #2f80ed);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+}
+
+.description_p {
+  text-align: justify;
+  font-size: 1.1rem;
+  color: #34495e;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+.callout {
+  display: block;
+  margin-top: 12px;
+  color: #2f80ed;
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+/* Centra solo el botón */
+.modern-btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.modern-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #56ccf2 10%, #2f80ed 90%);
+  color: #fff;
+  font-size: 1.18rem;
+  font-weight: 600;
+  box-shadow: 0 4px 24px #2f80ed33;
+  letter-spacing: 1px;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+  text-decoration: none;
+}
+
+.modern-btn:hover {
+  transform: translateY(-3px) scale(1.04);
+  background: linear-gradient(90deg, #2f80ed 10%, #56ccf2 90%);
+  box-shadow: 0 8px 32px #2f80ed55;
+}
+
+.hero-illustration {
+  width: 425px;
+  max-width: 40vw;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 8px 24px #2f80ed22);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-18px);}
+}
+
+@media (max-width: 900px) {
+  .modern-home {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    min-height: 70vh;
+  }
+  .hero-illustration {
+    width: 220px;
+    margin-bottom: 24px;
+    align-self: center;
+  }
+  .modern-btn-container {
+    justify-content: flex-start;
+  }
+}

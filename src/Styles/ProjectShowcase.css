@@ -1,0 +1,104 @@
+.scr-main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px 2vw 64px 2vw;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(38, 71, 164, 0.1);
+}
+
+.scr-hero {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  margin-bottom: 36px;
+}
+
+.scr-hero-img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 2px 18px #0001;
+  border: 3px solid #fff;
+  background: rgba(58, 190, 249, 0.12);
+}
+
+.scr-title {
+  color: #2647a4;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.scr-description {
+  color: #283a4d;
+  font-size: 1.17rem;
+}
+
+.scr-modules-nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 0 0 30px 0;
+}
+
+.scr-mod-btn {
+  background: rgba(58, 190, 249, 0.12);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 22px;
+  font-weight: 500;
+  color: #2647a4;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+.scr-mod-btn.active,
+.scr-mod-btn:hover {
+  background: linear-gradient(90deg, #2647a4 60%, #3abef9 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(58, 190, 249, 0.35);
+}
+
+.scr-module-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+  padding: 32px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #0001;
+  margin-top: 12px;
+}
+
+.scr-module-img {
+  width: 330px;
+  height: 210px;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px #0002;
+  background: rgba(58, 190, 249, 0.12);
+  margin-bottom: 0;
+}
+
+.scr-module-card h2 {
+  color: #2647a4;
+  margin-bottom: 13px;
+  font-size: 2rem;
+}
+
+.scr-module-card p {
+  color: #34495e;
+  font-size: 1.13rem;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .scr-hero { flex-direction: column; align-items: flex-start; }
+  .scr-hero-img { width: 180px; height: 180px; }
+  .scr-title { font-size: 2.1rem; }
+  .scr-module-card { flex-direction: column; align-items: center; }
+  .scr-module-img { width: 100%; max-width: 350px; }
+}
